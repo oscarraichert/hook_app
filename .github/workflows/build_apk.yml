@@ -22,10 +22,12 @@ jobs:
 
     - name: flutter-cli
       uses: steebchen/flutter@v1.1.0
+      
+    - name: build
       run: ./flutter build apk
 
     - uses: actions/upload-artifact@v4
-  with:
+    with:
     name: hook_test
 
     # A file, directory or wildcard pattern that describes what to upload
