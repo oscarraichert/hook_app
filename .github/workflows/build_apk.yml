@@ -27,6 +27,8 @@ jobs:
       uses: willo32/google-drive-upload-action@v1
       with:
         target: build/app/outputs/flutter-apk/app-release.apk
+        credentials: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_CREDENTIALS }}
+        parent_folder_id: 1OwdmtsuNsTZHVA13wn51wL7mAkx6wsmJ
 
     - uses: actions/upload-artifact@v4
       with:
