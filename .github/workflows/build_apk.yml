@@ -28,7 +28,7 @@ jobs:
       with:
         target: build/app/outputs/flutter-apk/app-release.apk
         credentials: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_CREDENTIALS }}
-        parent_folder_id: 1OwdmtsuNsTZHVA13wn51wL7mAkx6wsmJ
+        parent_folder_id: ${{ secrets.DRIVE_FOLDER_ID }}
 
     - uses: actions/upload-artifact@v4
       with:
