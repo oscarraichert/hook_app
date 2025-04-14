@@ -23,6 +23,11 @@ jobs:
     - run: flutter pub get       
     - run: flutter build apk
 
+    - name: Upload a file to Google Drive
+      uses: willo32/google-drive-upload-action@v1
+      with:
+        target: build/app/outputs/flutter-apk/app-release.apk
+
     - uses: actions/upload-artifact@v4
       with:
         name: hook_test
